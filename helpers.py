@@ -15,6 +15,10 @@ def GetSummarizedText(topic):
     #htmlParse = BeautifulSoup(html, 'html.parser')
     return wp.summary(topic, sentences = 5)
 
-#def downloadimages(query):
+def downloadimages(query):
+    for i in range(10):
+        url=f"https://source.unsplash.com/1600x900/?{query}"
+        urllib.request.urlretrieve(url, f"{i}.png")
 
 #print(GetSummarizedText('programming'))
+#downloadimages('cricket!')
